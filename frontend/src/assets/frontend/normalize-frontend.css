@@ -23,7 +23,27 @@ html {
 body {
     margin: 0;
 }
-
+.link-reset
+{
+    text-decoration: none;
+    color: inherit;
+}
+.btn-reset
+{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: block;
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+}
+.list-reset
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 /**
  * Render the `main` element consistently in IE.
  */
@@ -347,7 +367,7 @@ template {
 [hidden] {
     display: none;
 }
-h1,h2,h3,h4,h5,h6
+h1,h2,h3,h4,h5,h6,a
 {
     margin: 0;
     padding: 0;

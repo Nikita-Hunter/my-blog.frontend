@@ -7,7 +7,9 @@ const Sidebar = () => {
             <nav className="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div className="sb-sidenav-menu">
                     <div className="nav">
-                        <div className="sb-sidenav-menu-heading">Управление сайтом</div>
+                        <Link className="nav-link" to="/#">
+                            <div className="sb-sidenav-menu-heading">Перейти к сайту</div>
+                        </Link>
                         <Link className="nav-link" to="/admin">
                             <div className="sb-nav-link-icon"><i className="fas fa-tachometer-alt"></i></div>
                             Главная страница

@@ -1,6 +1,5 @@
 import React from 'react';
-import routes from '../../routing/routes';
-import {Switch, Route, Redirect} from "react-router-dom";
+import { Outlet } from 'react-router-dom';
 import Navbar from './component/navbar';
 import Sidebar from "./component/sidebar";
 import Footer from "./component/footer";
@@ -16,37 +15,7 @@ const Indexlayout = () => {
                 </div>
                 <div id="layoutSidenav_content">
                     <main>
-                        <Switch>
-                            {routes.map((route, idx) => {
-                                return (
-                                    route.component && (
-                                        <Route key={idx}
-                                               path={route.path}
-                                               exact={route.exact}
-                                               name={route.name}
-                                               render={(props) => (
-                                                   <route.component {...props} />
-                                               )}
-                                        />
-                                    )
-                                )
-                            })}
-                            <Redirect from="admin" to="/admin/dashboard" />
-                        </Switch>
-                        {/*<Routes>*/}
-                        {/*    {routes.filter(route => route.component)*/}
-                        {/*        .map(({ path, component: Component }, idx) => (*/}
-                        {/*            <Route*/}
-                        {/*                key={idx}*/}
-                        {/*                path={path}*/}
-                        {/*                element={<Component />}*/}
-                        {/*            />*/}
-                        {/*        ))}*/}
-                        {/*    <Route*/}
-                        {/*        from="/admin"*/}
-                        {/*        element={<Navigate to="/admin/dashboard"/>}*/}
-                        {/*    />*/}
-                        {/*</Routes>*/}
+                        <Outlet />
                     </main>
                     <Footer />
                 </div>
